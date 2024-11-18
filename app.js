@@ -1,10 +1,14 @@
 const express = require('express');
 const app = express();//creiamo un server
 const port = 3000; //andiam0o a dare un numero per la porta
+app.use(express.static('public')) //rendiamo publica la cartella public
+const array = require("./array.js"); //importiamo l'array 
 
-app.use(express.static('public'))
-
-const array = require("./array.js");
+let count = 0;
+array.array.forEach((el)=>{
+    count += 1;
+})
+console.log(count)
 
 app.listen(port, () => {  //mettiamo il server in ascolto alla porta numero 3000
     console.log(`sono in ascolto sulla porta numero ${port}`)
