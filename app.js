@@ -19,5 +19,5 @@ app.get('/', (req, res) => { //alla richiesta  di tipo get verso la rotta url ba
 })
 
 app.get('/bacheca', (req, res) => { //alla richiesta  di tipo get verso la rotta url base, si rispondera con quello che è dentro il .send
-    res.json(array)
+    res.json([array,count])
 })
